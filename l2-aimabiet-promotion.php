@@ -9,14 +9,14 @@
  *
  * @wordpress-plugin
  * Plugin Name:       L2-AiMaBiet-Promotion
- * Plugin URI:        
+ * Plugin URI:
  * Description:       Promotional Campaign Management Plugin for WooCommerce.
  * Version:           1.0.0
  * Author:            L2_AiMaBiet Group in HCMUS
  * Author URI:        https://github.com/HCMUS-OSSD/L2_AIMABIET
  * Text Domain:       l2-aimabiet-promotion
- * License:           MIT
- * License URI:       http://opensource.org/licenses/MIT
+ * License:           GPLv2
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.html
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -79,7 +79,7 @@ function l2_aimabiet_promotion_init() {
 		}
 
 		/* OK, it's safe for us to save the data now. */
-	
+
 		// Make sure that it is set.
 		if ( ! isset( $_POST['_meta_box_coupon_code'] ) ) {
 			return;
@@ -230,7 +230,7 @@ function l2_aimabiet_promotion_init() {
 
 			wp_reset_postdata();
 
-			
+
 		}
 		return '<div class="woocommerce columns-' . $atts['columns'] . '">' . ob_get_clean() . '</div>';
 	}
