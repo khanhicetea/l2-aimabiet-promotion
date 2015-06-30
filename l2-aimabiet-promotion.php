@@ -207,7 +207,7 @@ function l2_aimabiet_promotion_init() {
 
 		ob_start();
 
-		echo '<p style="text-align: center; border: 1px dashed black; margin: 10px 0 20px 0; padding: 10px 30px; color : red; ' . ($expired ? 'text-decoration:line-through;' : '') . '">Mã Khuyến Mãi <strong>' . $coupon->code . '</strong></p>';
+		echo '<p style="text-align: center; border: 1px dashed black; margin: 10px 0 20px 0; padding: 10px 30px; color : red; ' . ($expired ? 'text-decoration:line-through;' : '') . '">Mã Khuyến Mãi <strong>' . $coupon->code . '</strong> ' . ($coupon->expiry_date ? '[ Expiry Date : ' . date('d/m/Y', $coupon->expiry_date) . ' ]' : '') . '</p>';
 
 		if (!$expired) {
 			$products = new WP_Query( apply_filters( 'woocommerce_shortcode_products_query', $args, $atts ) );
